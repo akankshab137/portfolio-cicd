@@ -5,7 +5,7 @@ metadata:
   name: url-shortener
 
 spec:
-  replicas: 1
+  replicas: 2
 
   selector:
     matchLabels:
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: url-shortener
-          image: akankshab137/url-shortener:v3
+          image: ghcr.io/akankshab137/url-shortener:v3
           ports:
             - containerPort: 5000
 
