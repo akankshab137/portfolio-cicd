@@ -236,6 +236,26 @@ Check the rollout:
 kubectl rollout status deployment/url-shortener
 ```
 
+## Pipeline Evidence
+
+### GitHub Actions CI
+
+The GitHub Actions workflow automatically builds the Docker image and publishes it to GHCR using a unique Git commit SHA as the image tag.
+
+![GitHub Actions CI](screenshots/ci-success.png)
+
+### GitHub Container Registry
+
+The generated Docker image is published to GitHub Container Registry and can be referenced by its commit-specific tag.
+
+![GHCR Image](screenshots/GHCR-image.png)
+
+### Kubernetes Deployment
+
+The application was deployed and validated on a Kubernetes cluster using two replicas and a NodePort Service.
+
+![Kubernetes Deployment](screenshots/kubernetes-deployment.png)
+
 ## Key DevOps Concepts Demonstrated
 
 * Git-based source control
